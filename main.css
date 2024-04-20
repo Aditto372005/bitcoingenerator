@@ -63,7 +63,7 @@
     color: #000;
   }
   header img {
-    max-width: 150px;
+    max-width: 100px;
   }
   .aan {
     text-transform: uppercase;
@@ -173,7 +173,6 @@
       line-height: 44px;
       outline: 0;
       overflow: hidden;
-      padding: 0 20px;
       pointer-events: auto;
       position: relative;
       text-align: center;
@@ -393,6 +392,6 @@ justify-content: center;
     gap:10px;
   }
 
-  span {
+  .aad span {
     font-size: 2vw;
   }
