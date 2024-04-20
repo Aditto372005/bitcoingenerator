@@ -2,8 +2,11 @@
     font-family: Ubuntu;
     src: url("../../fonts/Ubuntu-Regular.ttf");
   }
+  html {
+    margin: 0;
+  }
   body {
-    background: rgb(154, 32, 214);
+    background: #023020;
     background-attachment: fixed;
     color: #eee;
     margin: 0;
@@ -20,22 +23,58 @@
   }
   header {
     text-align: center;
-    margin-top: 25px;
+    background-color: white;
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  }
+  header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #000;
   }
   header img {
-    max-width: 70%;
+    max-width: 150px;
   }
   .aan {
     text-transform: uppercase;
   }
   .aat {
-    margin: 0 auto;
+    margin: 0 auto!important;
     max-width: 800px;
   }
   .aae {
     background-color: #fff;
     margin: 30px 0;
-    border-radius: 16px;
     -webkit-box-shadow: 14px 17px 63px -25px rgba(71,71,71,1);
     -moz-box-shadow: 14px 17px 63px -25px rgba(71,71,71,1);
     box-shadow: 14px 17px 63px -25px rgba(71,71,71,1);
@@ -43,34 +82,77 @@
   .aae .aaj {
     padding: 10px 20px;
     text-align: center;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
     color: #000!important;
   }
   .aae .aai {
-    background-color: rgb(83, 0, 232);
-    font-weight: 700;
-    color: white!important; 
+      background-color: #FFFFFF;
+      border: 0;
+      box-sizing: border-box;
+      color: #111827;
+      font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      font-size: .875rem;
+      font-weight: 600;
+      line-height: 1.25rem;
+      padding: .75rem 1rem;
+      text-align: center;
+      text-decoration: none #D1D5DB solid;
+      text-decoration-thickness: auto;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
   }
   .aac {
-    background-color: rgb(83, 0, 232);
-    border: 3px dashed transparent;
-    font-weight: 700;
-    border-radius: 100px;
-  }
+      align-items: center;
+      appearance: none;
+      background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+      border: 0;
+      border-radius: 6px;
+      box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: "JetBrains Mono",monospace;
+      justify-content: center;
+      line-height: 1;
+      list-style: none;
+      overflow: hidden;
+      padding-left: 16px;
+      padding-right: 16px;
+      width: 100%;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      transition: box-shadow .15s,transform .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      white-space: nowrap;
+      will-change: box-shadow,transform;
+      font-size: 22px;
+    }
   .aac .aaj {
     color: #fff!important;
+    flex-direction: row!important;
   }
 
   .aag {
-    border: 1px solid #000;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 130%;
+
+    width: 100%!important;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    border-radius: 4px;
     padding: 8px 16px;
-    width: 100%;
-    border-radius: 66px;
+    border: 2px solid transparent;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+    :focus{
+        border: 2px solid rgb(124, 138, 255);
+    }
   }
   .rangeslider__handle:hover {
     background-color: #00d64f;
@@ -79,16 +161,30 @@
     background-color: #00d64f;
   }
   .aak {
-    cursor: pointer;
-    background-color: #00d64f;
-    color: #fff;
-    display: inline-block;
-    font-family: inherit;
-    font-size: 130%;
-    font-weight: 600;
-    padding: 15px;
-    border: 0;
-    border-radius: 66px;
+      background-color: initial;
+      background-image: linear-gradient(-180deg, #00D775, #00BD68);
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+      height: 44px;
+      line-height: 44px;
+      outline: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      pointer-events: auto;
+      position: relative;
+      text-align: center;
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: top;
+      white-space: nowrap;
+      width: 30%;
+      z-index: 9;
+      border: 0;
   }
   .aak:hover {
     background-color: #276617;
@@ -164,7 +260,8 @@
     max-width: 100%;
   }
   #aad {
-    min-height: 90px;
+    min-height: 200px;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
   }
@@ -182,16 +279,31 @@
     border-radius: 5px;
   }
   #aad .aab > .aal {
-    background-color: rgb(184, 0, 184);
-    color: #fff!important;
+      background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+      border-radius: .5rem;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      font-size: 16px;
+      justify-content: center;
+      text-decoration: none;
+      border: 0;
+      padding: 4px 16px;
+  
   }
   #aad .aab > .aar {
-    background-color: rgb(184, 0, 184);
-    color: #fff!important;
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-size: 16px;
+    justify-content: center;
+    text-decoration: none;
+    border: 0;
+    padding: 4px 16px;
   }
   #aad .aab > .aas {
-    background-color: whitesmoke;
-    border: 1px solid gray;
+    background-color: white;
+    border: 1px solid whitesmoke;
   }
   #aak {
     background-color: whitesmoke;
@@ -208,7 +320,10 @@
     margin-bottom: 6px;
   }
   #aae {
-    margin: 10px 0;
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
   }
   #aae #aac {
     width: 10em;
@@ -217,7 +332,7 @@
     width: 20em;
   }
   footer {
-    background-color: #e1962b;
+    background-color: #00D632;
     text-align: center;
     padding: 10px;
   }
@@ -232,17 +347,48 @@
     display: none;
   }
   #aah .aaf {
-    position: relative;
-    left: 0;
-    padding: 15px;
-    background-color: whitesmoke;
-    border: 1px solid rgb(184, 0, 184);
     -webkit-transition: left 0.2s;
-    color: black!important;
     transition: left 0.2s;
-    border-radius: 66px;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  font-size: 16px;
+  width: 250px;
   }
   #aah .aaf.hidden {
     left: 315px;
   }
-  
+  #aas {
+    padding: 8px 0;
+    position: relative;
+    cursor: text;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #fff;
+    border: 1px solid #d6d6e7;
+    border-radius: 3px;
+    color: rgb(35, 38, 59);
+    box-shadow: inset 0 1px 4px 0 rgb(119 122 175 / 30%);
+    overflow: hidden;
+    transition: all 100ms ease-in-out;
+    :focus {
+        border-color: #3c4fe0;
+        box-shadow: 0 1px 0 0 rgb(35 38 59 / 5%);
+    }
+
+  }
+  #aas::placeholder {
+    padding: 25px!important;
+  }
+
+  .live-chat {
+    display: flex!important;
+    flex-direction: column;
+    gap:10px;
+  }
