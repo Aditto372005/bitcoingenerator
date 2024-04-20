@@ -283,7 +283,7 @@
       border-radius: .5rem;
       box-sizing: border-box;
       color: #FFFFFF;
-      font-size: 16px;
+      font-size: 2vw;
       justify-content: center;
       text-decoration: none;
       border: 0;
@@ -295,14 +295,14 @@
     border-radius: .5rem;
     box-sizing: border-box;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 2vw;
     justify-content: center;
     text-decoration: none;
     border: 0;
     padding: 4px 16px;
   }
   #aad .aab > .aas {
-    background-color: white;
+    background-color: transparent;
     border: 1px solid whitesmoke;
   }
   #aak {
@@ -391,4 +391,8 @@ justify-content: center;
     display: flex!important;
     flex-direction: column;
     gap:10px;
+  }
+
+  span {
+    font-size: 2vw;
   }
