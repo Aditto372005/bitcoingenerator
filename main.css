@@ -8,11 +8,63 @@
   body {
     background: #023020;
     background-attachment: fixed;
-    color: #eee;
+    color: #fff;
     margin: 0;
     font-family: Ubuntu, sans-serif;
     padding: 0 16px;
   }
+  body:after {
+    content: "$";
+    position: absolute;
+    text-align: center;
+    font-size: 50vw!important;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    z-index: -10;
+    color: background-clip: text;
+    color: rgba(255, 255, 255, 0.6);
+    animation: pulsate 1.5s infinite alternate;
+    text-shadow:     0 0 .02rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #00D632,
+    0 0 0.8rem #00D632,
+    0 0 2.8rem #00D632,
+    inset 0 0 1.3rem #00D632;
+  }
+  @keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px #00D632,
+        0 0 11px #00D632,
+        0 0 19px #00D632,
+        0 0 40px #00D632,
+        0 0 80px #00D632,
+        0 0 90px #00D632,
+        0 0 100px #00D632,
+        0 0 150px #00D632;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 2px #00D632,
+      0 0 4px #00D632,
+      0 0 6px #00D632,
+      0 0 10px #00D632,
+      0 0 45px #00D632,
+      0 0 55px #00D632,
+      0 0 70px #00D632,
+      0 0 80px #00D632;
+  
+  }
+}
+
   a {
     color: #e1962b;
     text-decoration: none;
@@ -23,13 +75,11 @@
   }
   header {
     text-align: center;
-    background-color: white;
+    background-color: rgba(250, 250, 250, 0.06);
+    backdrop-filter: blur(5px);
   align-items: center;
   appearance: none;
-  background-color: #FCFCFD;
   border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
   box-sizing: border-box;
   color: #36395A;
   cursor: pointer;
@@ -73,29 +123,32 @@
     max-width: 800px;
   }
   .aae {
-    background-color: #fff;
+    background-color: rgba(225, 225, 225, 0.06);
     margin: 30px 0;
     -webkit-box-shadow: 14px 17px 63px -25px rgba(71,71,71,1);
     -moz-box-shadow: 14px 17px 63px -25px rgba(71,71,71,1);
     box-shadow: 14px 17px 63px -25px rgba(71,71,71,1);
+    backdrop-filter: blur(5px);
+    border: 0.1rem solid rgba(225, 225, 225, 0.2);
+    border-radius: 16px;
   }
   .aae .aaj {
     padding: 10px 20px;
     text-align: center;
-    color: #000!important;
+    color: #fff!important;
   }
   .aae .aai {
-      background-color: #FFFFFF;
+      background-color: transparent;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
       border: 0;
       box-sizing: border-box;
-      color: #111827;
-      font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      color: #fff!important;
       font-size: .875rem;
       font-weight: 600;
       line-height: 1.25rem;
       padding: .75rem 1rem;
       text-align: center;
-      text-decoration: none #D1D5DB solid;
       text-decoration-thickness: auto;
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
       cursor: pointer;
@@ -106,7 +159,6 @@
   .aac {
       align-items: center;
       appearance: none;
-      background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
       border: 0;
       border-radius: 6px;
       box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
@@ -140,7 +192,7 @@
   .aag {
 
     width: 100%!important;
-    color: rgb(36, 35, 42);
+    color: white!important;
     font-size: 16px;
     line-height: 20px;
     min-height: 28px;
@@ -148,7 +200,7 @@
     padding: 8px 16px;
     border: 2px solid transparent;
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
-    background: rgb(251, 251, 251);
+    background: rgba(251, 251, 251, 0.2);
     transition: all 0.1s ease 0s;
     :focus{
         border: 2px solid rgb(124, 138, 255);
@@ -162,7 +214,7 @@
   }
   .aak {
       background-color: initial;
-      background-image: linear-gradient(-180deg, #00D775, #00BD68);
+      background-image: linear-gradient(-180deg, #00D632, #00BD68);
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
       color: #FFFFFF;
@@ -273,12 +325,12 @@
   }
   #aad .aab > .aap {
     font-family: monospace;
-    font-size: 110%;
+    font-size: 2vw;
     padding: 3px;
     border-radius: 5px;
   }
   #aad .aab > .aal {
-      background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+      background: rgba(255, 255, 255, 0.2);
       border-radius: .5rem;
       box-sizing: border-box;
       color: #FFFFFF;
@@ -290,7 +342,7 @@
   
   }
   #aad .aab > .aar {
-    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: .5rem;
     box-sizing: border-box;
     color: #FFFFFF;
@@ -305,7 +357,8 @@
     border: 1px solid whitesmoke;
   }
   #aak {
-    background-color: whitesmoke;
+    background-color: rgba(225, 225, 225, 0.06);
+    backdrop-filter: blur(5px);
     font-family: monospace;
     text-align: left;
     padding: 15px;
@@ -369,7 +422,8 @@ justify-content: center;
     cursor: text;
     font-size: 14px;
     line-height: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur (5px);
     border: 1px solid #d6d6e7;
     border-radius: 3px;
     color: rgb(35, 38, 59);
@@ -392,6 +446,6 @@ justify-content: center;
     gap:10px;
   }
 
-  .aad span {
+  .aab {
     font-size: 2vw;
   }
